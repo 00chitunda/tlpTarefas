@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Exemplo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d9d9d9;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        
+        .menu,
+        .sidebar,
+        .footer {
+            background-color: #8cc63f;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .fotos {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        
+        .box {
+            background-color: #8cc63f;
+            border: 2px solid black;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .textos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .text-box {
+            background-color: #8cc63f;
+            border: 2px solid black;
+            width: 48%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .footer {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ben-vindo a T3 do Segundo Trimestre</h1>
+    <a href="segundo.html"> Voltar a Página Segundo Trimestre</a>
+
+
+    <div class="container">
+
+        <header class="menu">
+            MENU
+        </header>
+
+        <section class="sidebar">
+            SIDE BAR
+        </section>
+
+        <section class="fotos">
+            <div class="box">FOTO</div>
+            <div class="box">FOTO</div>
+            <div class="box">FOTO</div>
+        </section>
+
+        <section class="textos">
+            <div class="text-box">TEXTO</div>
+            <div class="text-box">TEXTO</div>
+        </section>
+
+        <footer class="footer">
+            FOOTER
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

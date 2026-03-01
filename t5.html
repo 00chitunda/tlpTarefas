@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e Tabelas - Estrutura HTML Completa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap');
+         :root {
+            --primary: #6366f1;
+            --secondary: #ec4899;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .example-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--accent);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .code-block {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            border-left: 4px solid var(--accent);
+        }
+        
+        pre {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        
+        .tag {
+            color: #f472b6;
+        }
+        
+        .attr {
+            color: #60a5fa;
+        }
+        
+        .val {
+            color: #a78bfa;
+        }
+        
+        .content {
+            color: #e2e8f0;
+        }
+        
+        .comment {
+            color: #64748b;
+        }
+        
+        .preview {
+            background: white;
+            color: var(--dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background: var(--dark);
+            color: white;
+        }
+        
+        .voltar {
+            color: white;
+        }
+        
+         :hover a {
+            color: #a3e40d;
+            border-left: 4px solid transparent;
+            position: relative;
+        }
+        
+        .voltar a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p><a class="voltar" href="segundo.html"> Voltar a Página Segundo Trimestre</a></p>
+    <header>
+        <h1>📋 Estrutura HTML Completa</h1>
+        <p style="margin-top: 0.5rem; opacity: 0.9;">Tags usadas nos exemplos de Listas e Tabelas</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SEÇÃO 1: LISTAS -->
+        <section class="example-box">
+            <h2>1. Lista Não Ordenada (&lt;ul&gt;)</h2>
+            <p style="margin-bottom: 1rem; color: #94a3b8;">Usada para menus, navegação e agrupamentos sem ordem específica.</p>
+
+            <h3>HTML Estrutural:</h3>
+            <div class="code-block">
+                <pre><code><span class="comment">&lt;!-- Lista básica --&gt;</span>
+<span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Item 1</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Item 2</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Item 3</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+
+<span class="comment">&lt;!-- Lista com classes para estilização --&gt;</span>
+<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="val">"modern-menu"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Dashboard</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Perfil</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Configurações</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+
+<span class="comment">&lt;!-- Lista com conteúdo complexo --&gt;</span>
+<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="val">"timeline"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span>
+        <span class="tag">&lt;strong&gt;</span><span class="content">2020</span><span class="tag">&lt;/strong&gt;</span> <span class="content">- Início</span>
+        <span class="tag">&lt;p&gt;</span><span class="content">Descrição do evento</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>
+        <span class="tag">&lt;strong&gt;</span><span class="content">2021</span><span class="tag">&lt;/strong&gt;</span> <span class="content">- Avanço</span>
+        <span class="tag">&lt;p&gt;</span><span class="content">Outra descrição</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></code></pre>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Atributos importantes:</strong><br> • <code>class</code> - Para aplicar estilos CSS específicos<br> • <code>id</code> - Identificador único (uso único na página)
+            </div>
+
+            <h3>Preview:</h3>
+            <div class="preview">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: LISTAS ORDENADAS -->
+        <section class="example-box">
+            <h2>2. Lista Ordenada (&lt;ol&gt;)</h2>
+            <p style="margin-bottom: 1rem; color: #94a3b8;">Usada quando a ordem dos itens importa (procedimentos, rankings).</p>
+
+            <h3>HTML Estrutural:</h3>
+            <div class="code-block">
+                <pre><code><span class="comment">&lt;!-- Lista numerada padrão --&gt;</span>
+<span class="tag">&lt;ol&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Primeiro passo</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Segundo passo</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Terceiro passo</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="comment">&lt;!-- Lista com tipo diferente --&gt;</span>
+<span class="tag">&lt;ol</span> <span class="attr">type</span>=<span class="val">"A"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Opção A</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Opção B</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="comment">&lt;!-- Lista com start específico --&gt;</span>
+<span class="tag">&lt;ol</span> <span class="attr">start</span>=<span class="val">"5"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Item 5</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="content">Item 6</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span></code></pre>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Atributos especiais:</strong><br> • <code>type="1|A|a|I|i"</code> - Define o tipo de marcador<br> • <code>start="número"</code> - Inicia a numeração em número específico<br> • <code>reversed</code> - Ordem decrescente
+            </div>
+
+            <h3>Preview:</h3>
+            <div class="preview">
+                <ol>
+                    <li>Primeiro passo</li>
+                    <li>Segundo passo</li>
+                    <li>Terceiro passo</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: TABELAS -->
+        <section class="example-box">
+            <h2>3. Tabela Básica (&lt;table&gt;)</h2>
+            <p style="margin-bottom: 1rem; color: #94a3b8;">Estrutura completa de uma tabela HTML semântica.</p>
+
+            <h3>HTML Estrutural:</h3>
+            <div class="code-block">
+                <pre><code><span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="val">"dashboard-table"</span><span class="tag">&gt;</span>
+    
+    <span class="comment">&lt;!-- Cabeçalho da tabela --&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th&gt;</span><span class="content">Nome</span><span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span><span class="content">Cargo</span><span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span><span class="content">Status</span><span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    
+    <span class="comment">&lt;!-- Corpo da tabela --&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Ana Silva</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Designer</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Ativo</span><span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Bruno Costa</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Dev</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Ativo</span><span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+    
+    <span class="comment">&lt;!-- Rodapé (opcional) --&gt;</span>
+    <span class="tag">&lt;tfoot&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td</span> <span class="attr">colspan</span>=<span class="val">"3"</span><span class="tag">&gt;</span><span class="content">Total: 2 usuários</span><span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tfoot&gt;</span>
+    
+<span class="tag">&lt;/table&gt;</span></code></pre>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Tags essenciais:</strong><br> • <code>&lt;table&gt;</code> - Container principal<br> • <code>&lt;thead&gt;</code> - Agrupa cabeçalhos<br> • <code>&lt;tbody&gt;</code> - Agrupa dados<br> • <code>&lt;tfoot&gt;</code> - Rodapé (opcional)<br>                • <code>&lt;tr&gt;</code> - Table Row (linha)<br> • <code>&lt;th&gt;</code> - Table Header (célula de cabeçalho)<br> • <code>&lt;td&gt;</code> - Table Data (célula de dados)
+            </div>
+
+            <h3>Preview:</h3>
+            <div class="preview">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Silva</td>
+                            <td>Designer</td>
+                            <td>Ativo</td>
+                        </tr>
+                        <tr>
+                            <td>Bruno Costa</td>
+                            <td>Dev</td>
+                            <td>Ativo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: TABELA AVANÇADA -->
+        <section class="example-box">
+            <h2>4. Tabela com Células Mescladas</h2>
+            <p style="margin-bottom: 1rem; color: #94a3b8;">Uso de colspan e rowspan para layouts complexos.</p>
+
+            <h3>HTML Estrutural:</h3>
+            <div class="code-block">
+                <pre><code><span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="val">"complex-table"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th</span> <span class="attr">rowspan</span>=<span class="val">"2"</span><span class="tag">&gt;</span><span class="content">Produto</span><span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th</span> <span class="attr">colspan</span>=<span class="val">"2"</span><span class="tag">&gt;</span><span class="content">Valores</span><span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th&gt;</span><span class="content">Custo</span><span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span><span class="content">Venda</span><span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">Notebook</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">R$ 3.000</span><span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span><span class="content">R$ 4.500</span><span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span></code></pre>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Atributos de mesclagem:</strong><br> • <code>colspan="n"</code> - Mescla n colunas horizontalmente<br> • <code>rowspan="n"</code> - Mescla n linhas verticalmente
+            </div>
+
+            <h3>Preview:</h3>
+            <div class="preview">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Produto</th>
+                            <th colspan="2">Valores</th>
+                        </tr>
+                        <tr>
+                            <th>Custo</th>
+                            <th>Venda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Notebook</td>
+                            <td>R$ 3.000</td>
+                            <td>R$ 4.500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: ESTRUTURA COMPLETA -->
+        <section class="example-box">
+            <h2>5. Exemplo Completo - Estrutura HTML Documento</h2>
+            <p style="margin-bottom: 1rem; color: #94a3b8;">Como organizar tudo em um arquivo HTML válido.</p>
+
+            <div class="code-block">
+                <pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"pt-BR"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="content">Minha Página</span><span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;style&gt;</span>
+        <span class="comment">/* CSS aqui ou link externo */</span>
+        <span class="tag">ul</span> { <span class="attr">list-style</span>: <span class="val">none</span>; }
+        <span class="tag">table</span> { <span class="attr">border-collapse</span>: <span class="val">collapse</span>; }
+    <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+    <span class="tag">&lt;header&gt;</span>
+        <span class="tag">&lt;h1&gt;</span><span class="content">Título do Site</span><span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;nav&gt;</span>
+            <span class="tag">&lt;ul&gt;</span>
+                <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">&gt;</span><span class="content">Home</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">&gt;</span><span class="content">Sobre</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/nav&gt;</span>
+    <span class="tag">&lt;/header&gt;</span>
+
+    <span class="tag">&lt;main&gt;</span>
+        <span class="tag">&lt;section&gt;</span>
+            <span class="tag">&lt;h2&gt;</span><span class="content">Lista de Tarefas</span><span class="tag">&lt;/h2&gt;</span>
+            <span class="tag">&lt;ul&gt;</span>
+                <span class="tag">&lt;li&gt;</span><span class="content">Tarefa 1</span><span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span><span class="content">Tarefa 2</span><span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/section&gt;</span>
+
+        <span class="tag">&lt;section&gt;</span>
+            <span class="tag">&lt;h2&gt;</span><span class="content">Dados</span><span class="tag">&lt;/h2&gt;</span>
+            <span class="tag">&lt;table&gt;</span>
+                <span class="tag">&lt;thead&gt;</span>
+                    <span class="tag">&lt;tr&gt;</span>
+                        <span class="tag">&lt;th&gt;</span><span class="content">Nome</span><span class="tag">&lt;/th&gt;</span>
+                        <span class="tag">&lt;th&gt;</span><span class="content">Idade</span><span class="tag">&lt;/th&gt;</span>
+                    <span class="tag">&lt;/tr&gt;</span>
+                <span class="tag">&lt;/thead&gt;</span>
+                <span class="tag">&lt;tbody&gt;</span>
+                    <span class="tag">&lt;tr&gt;</span>
+                        <span class="tag">&lt;td&gt;</span><span class="content">João</span><span class="tag">&lt;/td&gt;</span>
+                        <span class="tag">&lt;td&gt;</span><span class="content">25</span><span class="tag">&lt;/td&gt;</span>
+                    <span class="tag">&lt;/tr&gt;</span>
+                <span class="tag">&lt;/tbody&gt;</span>
+            <span class="tag">&lt;/table&gt;</span>
+        <span class="tag">&lt;/section&gt;</span>
+    <span class="tag">&lt;/main&gt;</span>
+
+    <span class="tag">&lt;footer&gt;</span>
+        <span class="tag">&lt;p&gt;</span><span class="content">&copy; 2024 Meu Site</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/footer&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="example-box">
+            <h2>📌 Resumo das Tags</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+                <div>
+                    <h3 style="color: var(--secondary);">Listas</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;ul&gt;</code> - Lista não ordenada</li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;ol&gt;</code> - Lista ordenada</li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;li&gt;</code> - Item de lista</li>
+                        <li style="padding: 0.5rem 0;"><code>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</code> - Lista de definição</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--secondary);">Tabelas</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;table&gt;</code> - Tabela</li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code> - Seções</li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;tr&gt;</code> - Linha</li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><code>&lt;th&gt;</code> - Cabeçalho</li>
+                        <li style="padding: 0.5rem 0;"><code>&lt;td&gt;</code> - Dado/célula</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

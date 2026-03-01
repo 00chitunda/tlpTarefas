@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sobret6 {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* MENU LATERAL */
+
+.sidebar {
+    width: 220px;
+    background-color: #5773e4;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: greenyellow;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: white
+}
+
+.sidebar ul li a:hover {
+    background: #3f7adb;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+.main {
+    flex: 1;
+    background-color: #ebf2f5;
+}
+
+
+/* MENU TOPO */
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5773e4;
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.topbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.topbar ul li {
+    color: #fff;
+    cursor: pointer;
+}
+
+.topbar a {
+    text-decoration: none;
+}
+
+.topbar ul li:hover {
+    text-decoration: underline;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+
+/* CONTEÚDO */
+
+.content {
+    padding: 30px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .topbar {
+        justify-content: center;
+    }
+    .topbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: green;
+}
+
+.t2 a {
+    text-decoration: none;
+}
+
+.t2 ul li:hover {
+    text-decoration: underline;
+}
+
+.t2 ul li {
+    text-align: right;
+}
+
+.t1 a {
+    text-decoration: none;
+}
+
+.t1 ul li:hover {
+    text-decoration: underline;
+}
+
+.t1 ul li {
+    text-align: right;
+}
+
+.sobret6 h2 {
+    color: blue;
+}
+
+.sobret6 h4 {
+    color: brown;
+    border: #3f7adb;
+}
