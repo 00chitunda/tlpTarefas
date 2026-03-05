@@ -5,9 +5,19 @@
     font-family: Arial, sans-serif;
 }
 
+:root {
+     :root {
+        --primary: #2563eb;
+        --secondary: #1e293b;
+        --accent: #f59e0b;
+        --background: #595b5e;
+    }
+}
+
 body {
     display: flex;
     min-height: 100vh;
+    background: #1e293b;
 }
 
 .sobret6 {
@@ -26,7 +36,7 @@ body {
 }
 
 .sidebar h2 {
-    color: greenyellow;
+    color: rgb(143, 153, 128);
     text-align: center;
     margin-bottom: 20px;
     font-size: 18px;
@@ -41,12 +51,28 @@ body {
     cursor: pointer;
 }
 
-.sidebar ul li:hover {
-    background-color: white
+.sidebar ul li {
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    color: white;
+    padding: 15px 40px;
 }
 
 .sidebar ul li a:hover {
     background: #3f7adb;
+}
+
+.t1 ul li a:hover {
+    background: #c1cad8;
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.t2 ul li a:hover {
+    background: #c1cad8;
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 
@@ -129,7 +155,9 @@ body {
 
 h1 {
     text-align: center;
-    color: green;
+    color: rgb(87, 94, 87);
+    padding: auto;
+    margin-bottom: auto;
 }
 
 .t2 a {
